@@ -265,6 +265,8 @@ model.export(export_dir='.')
 
     INFO:tensorflow:TensorFlow Lite model exported successfully: .\model.tflite
 
+
+导入模型
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/e6e5a818c9334a3ebf92789d026015aa.png)
 
 ```
@@ -280,5 +282,5 @@ private class ImageAnalyzer(ctx: Context, private val listener: RecognitionListe
         }
         
 ```
-
+运行代码
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/a9f9f4c4958246468c99b0134c6c4966.jpeg)
