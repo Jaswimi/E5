@@ -235,6 +235,7 @@ loss, accuracy = model.evaluate(test_data)
 第四步，导出Tensorflow Lite模型
 
 
+
 ```python
 model.export(export_dir='.')
 ```
@@ -264,3 +265,20 @@ model.export(export_dir='.')
 
     INFO:tensorflow:TensorFlow Lite model exported successfully: .\model.tflite
 
+![在这里插入图片描述](https://img-blog.csdnimg.cn/e6e5a818c9334a3ebf92789d026015aa.png)
+
+```
+import org.tensorflow.lite.examples.classification.ml.Model
+private class ImageAnalyzer(ctx: Context, private val listener: RecognitionListener) :
+        ImageAnalysis.Analyzer {
+
+        // TODO 1: Add class variable TensorFlow Lite Model
+        // Initializing the flowerModel by lazy so that it runs in the same thread when the process
+        // method is called.
+        private val flowerModel = Model.newInstance(ctx)
+        ...
+        }
+        
+```
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/a9f9f4c4958246468c99b0134c6c4966.jpeg)
